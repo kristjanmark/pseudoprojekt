@@ -1,7 +1,9 @@
 <?php
-$eesn = 'Kristjan';
-$peren = 'Mark';
-$vanus = 21;
-$eesnimi_algab_vokaaliga = true;
-echo $eesn. " " .$peren. " (". $vanus .")";
+$isik=array(
+    'eesnimi'=>'Kristjan',
+    'perenimi'=>'Mark',
+    'vanus'=>21
+);
+$eesnimi_algab_vokaaliga=false;
+echo $isik['eesnimi']." ".$isik['perenimi']."(".$isik['vanus'].")";
 ?>
