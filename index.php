@@ -1,6 +1,14 @@
 <?php
-$posts = array("title"=>"Man must explore, and this is exploration at its greatest", "subtitle"=>"Problems look mighty small from 150 miles up", "author"=>"Start Bootstrap", "date"=>"September 24, 2014");
+$post[] = array("Man must explore, and this is exploration at its greatest",
+    "Problems look mighty small from 150 miles up",
+    "Start Bootstrap",
+    "September 24, 2014");
+$post[] = array("I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.",
+    "We predict too much for the next year and yet far too little for the next ten.",
+    "Start Bootstrap",
+    "August 24, 2014");
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,9 +29,13 @@ $posts = array("title"=>"Man must explore, and this is exploration at its greate
     <link href="css/clean-blog.min.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"
+          type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet'
+          type='text/css'>
+    <link
+        href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+        rel='stylesheet' type='text/css'>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -41,7 +53,8 @@ $posts = array("title"=>"Man must explore, and this is exploration at its greate
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -90,29 +103,33 @@ $posts = array("title"=>"Man must explore, and this is exploration at its greate
 
 <!-- Main Content -->
 <div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <div class="post-preview">
-                <a href="post.html">
-                    <h2 class="post-title">
-                        <?=$posts['title']?>
-                    </h2>
-                    <h3 class="post-subtitle">
-                        <?=$posts['subtitle']?>
-                    </h3>
-                </a>
-                <p class="post-meta">Posted by <a href="#"><?=$posts['author']?></a> on <?=$posts['date']?></p>
+    <?php foreach ($post as $items): ?>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-preview">
+                    <a href="post.html">
+                        <h2 class="post-title">
+                            <?php echo "$items[0]"; ?>
+                        </h2>
+
+                        <h3 class="post-subtitle">
+                            <?php echo "$items[1]"; ?>
+                        </h3>
+                    </a>
+
+                    <p class="post-meta">Posted by <a href="#"><?php echo "$items[2]"; ?></a>
+                        on <?php echo "$items[3]"; ?></p>
+                </div>
+                <hr>
             </div>
-            <hr>
-            <hr>
-            <!-- Pager -->
-            <ul class="pager">
-                <li class="next">
-                    <a href="#">Older Posts &rarr;</a>
-                </li>
-            </ul>
         </div>
-    </div>
+    <?php endforeach ?>
+    <!-- Pager -->
+    <ul class="pager">
+        <li class="next">
+            <a href="#">Older Posts &rarr;</a>
+        </li>
+    </ul>
 </div>
 
 <hr>
