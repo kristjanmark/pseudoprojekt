@@ -10,7 +10,7 @@
 $page = isset($_GET['page']) && file_exists($_GET['page'].".php")? $_GET['page'] : 'home';
 require $page.".php";
 ?>
-<p>sakfnsoadng</p>
+<p>fesrfesrdse</p>
 </body>
 
 
