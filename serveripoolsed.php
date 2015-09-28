@@ -9,7 +9,15 @@ echo $isik->{'eesnimi'}." ".$isik->{'perenimi'}." (".$isik->{'vanus'}.") ".$isik
 if(isset($_GET['koer'])){
     echo $_GET['koer']."<br>";
 };
+if(isset($_POST['kass'])){
+    echo 'Kass on: '.$_POST['kass'].'<br>';
+}
 if($eesnimi_algab_vokaaliga){
     echo "Nimi algab vokaaliga!";
 }
 ?>
+
+<form action="?" method="post">
+    <input name="kass">
+    <input type="submit">
+</form>
