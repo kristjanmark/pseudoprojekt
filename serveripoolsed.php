@@ -1,3 +1,5 @@
 <?php
-echo 'Tere'. " " .'Maailm';
+$eesn = 'Kristjan';
+$peren = 'Mark';
+echo $eesn. " " .$peren;
 ?>
