@@ -71,7 +71,7 @@ INSERT INTO `authors` (`authors_id`, `name`) VALUES
 ALTER TABLE `$posts`
   ADD PRIMARY KEY (`post_id`);
 
---
+--#
 -- Indeksid tabelile `authors`
 --
 ALTER TABLE `authors`
