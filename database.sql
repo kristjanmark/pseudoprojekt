@@ -3,9 +3,9 @@
  +-- http://www.phpmyadmin.net
  +--
  +-- Host: 127.0.0.1
- +-- Loomise aeg: Sept 22, 2015 kell 01:11 p.k.
- +-- Serveri versioon: 5.6.26
- +-- PHP versioon: 5.6.12
+ +-- Generation Time: Sep 29, 2015 at 09:41 AM
+ +-- Server version: 5.6.26
+ +-- PHP Version: 5.6.12
  +
  +SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
  +SET time_zone = "+00:00";
@@ -17,13 +17,13 @@
  +/*!40101 SET NAMES utf8mb4 */;
  +
  +--
- +-- Andmebaas: `blog`
+ +-- Database: `blog`
  +--
  +
  +-- --------------------------------------------------------
  +
  +--
- +-- Tabeli struktuur tabelile `$posts`
+ +-- Table structure for table `$posts`
  +--
  +
  +CREATE TABLE IF NOT EXISTS `$posts` (
@@ -36,7 +36,7 @@
  +) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
  +
  +--
- +-- Andmete tõmmistamine tabelile `$posts`
+ +-- Dumping data for table `$posts`
  +--
  +
  +INSERT INTO `$posts` (`post_id`, `title`, `description`, `author_id`, `date`, `content`) VALUES
@@ -46,7 +46,7 @@
  +-- --------------------------------------------------------
  +
  +--
- +-- Tabeli struktuur tabelile `authors`
+ +-- Table structure for table `authors`
  +--
  +
  +CREATE TABLE IF NOT EXISTS `authors` (
@@ -55,39 +55,39 @@
  +) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
  +
  +--
- +-- Andmete tõmmistamine tabelile `authors`
+ +-- Dumping data for table `authors`
  +--
  +
  +INSERT INTO `authors` (`authors_id`, `name`) VALUES
  +(1, 'Start Bootstrap');
  +
  +--
- +-- Indeksid tõmmistatud tabelitele
+ +-- Indexes for dumped tables
  +--
  +
  +--
- +-- Indeksid tabelile `$posts`
+ +-- Indexes for table `$posts`
  +--
  +ALTER TABLE `$posts`
  +  ADD PRIMARY KEY (`post_id`);
  +
  +--
- +-- Indeksid tabelile `authors`
+ +-- Indexes for table `authors`
  +--
  +ALTER TABLE `authors`
  +  ADD PRIMARY KEY (`authors_id`);
  +
  +--
- +-- AUTO_INCREMENT tõmmistatud tabelitele
+ +-- AUTO_INCREMENT for dumped tables
  +--
  +
  +--
- +-- AUTO_INCREMENT tabelile `$posts`
+ +-- AUTO_INCREMENT for table `$posts`
  +--
  +ALTER TABLE `$posts`
  +  MODIFY `post_id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
  +--
- +-- AUTO_INCREMENT tabelile `authors`
+ +-- AUTO_INCREMENT for table `authors`
  +--
  +ALTER TABLE `authors`
  +  MODIFY `authors_id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
